@@ -35,3 +35,6 @@ class BinarySearchTreeNode:
                 self.right.add_child(data)
             else:
                 self.right = BinarySearchTreeNode(data)
+
+    def in_order_traversal(self):
+        elements = []
