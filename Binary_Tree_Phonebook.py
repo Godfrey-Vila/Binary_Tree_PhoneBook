@@ -74,3 +74,11 @@ def build_tree(elements):
         root.add_child(elements[i])
 
     return root
+
+def new_contacts(my_name):
+    Elements = list()
+    Elements.append(str(input("Enter your First name: ").upper()))
+    Elements.append(str(input("Enter your Last name: ").upper()))
+    Elements.append(input("Enter your Address:").upper())
+    Elements.append(int(input("Enter your Phone number:")))
+    print("Your new add list is", Elements)
