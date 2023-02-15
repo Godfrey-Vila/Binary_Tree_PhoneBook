@@ -110,3 +110,14 @@ def delete(my_name):
     if temp == 0:
         print("Sorry, you have entered an invalid query.\n Please recheck and try again later.")
         return my_name
+
+def view(my_name):
+    my_name_tree = build_tree(my_name)
+    if not my_name:
+        print("List is empty: []")
+    else:
+        print("your list of contacts are:")
+        print("")
+        for i in range(len(my_name_tree.in_order_traversal())):
+            print(my_name_tree.in_order_traversal()[i])
+    return my_name
