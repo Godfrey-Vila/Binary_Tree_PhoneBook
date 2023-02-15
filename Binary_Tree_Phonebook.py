@@ -121,3 +121,20 @@ def view(my_name):
         for i in range(len(my_name_tree.in_order_traversal())):
             print(my_name_tree.in_order_traversal()[i])
     return my_name
+
+while True:
+    menu()
+    choice = int(input("Enter number of choice:"))
+    print("")
+    if __name__ == "__main__":
+        if choice == 1:
+            my_name = new_contacts(my_name)
+        elif choice == 2:
+            my_name = delete(my_name)
+        elif choice == 3:
+           my_name = view(my_name)
+        elif choice == 4:
+            print("Thank you for using this program!")
+            break
+        else:
+            print("Invalid function, please choose from 1 to 4 only!: ")
