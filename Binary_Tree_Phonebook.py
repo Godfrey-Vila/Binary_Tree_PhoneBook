@@ -89,3 +89,24 @@ def new_contacts(my_name):
         print(my_name_tree.in_order_traversal()[i])
 
     return my_name
+
+def delete(my_name):
+    query = str(input("Please enter the name of the contact you wish to remove: ").upper())
+    temp = 0
+    my_name_tree = build_tree(my_name)
+    for i in range(len(my_name)):
+        if query == my_name[i][0]:
+            temp += 1
+
+
+            print(my_name.pop(i))
+            print("This contact has been deleted")
+
+            print("")
+            for i in range(len(my_name_tree.in_order_traversal())):
+                print(my_name_tree.in_order_traversal()[i])
+
+            return my_name
+    if temp == 0:
+        print("Sorry, you have entered an invalid query.\n Please recheck and try again later.")
+        return my_name
