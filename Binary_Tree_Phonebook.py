@@ -82,3 +82,10 @@ def new_contacts(my_name):
     Elements.append(input("Enter your Address:").upper())
     Elements.append(int(input("Enter your Phone number:")))
     print("Your new add list is", Elements)
+    my_name.append(Elements)
+    my_name_tree = build_tree(my_name)
+    print("")
+    for i in range(len(my_name_tree.in_order_traversal())):
+        print(my_name_tree.in_order_traversal()[i])
+
+    return my_name
