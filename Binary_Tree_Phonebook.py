@@ -15,3 +15,8 @@ def menu():
     print("3. View Contact")
     print("4. Exit")
 
+class BinarySearchTreeNode:
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
